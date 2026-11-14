@@ -1,0 +1,6 @@
+pinggy
+ollama
+streamlit
+python-dotenv
+requests
+numpy
