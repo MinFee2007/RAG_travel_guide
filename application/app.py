@@ -6,6 +6,10 @@ load_dotenv()
 from authentication import sign_in, sign_up
 from rag import respond_rag
 
+# DISPLAY
+# Input: User actions, backend data
+# Output: Frontend
+
 # Config streamlit page
 st.set_page_config(page_title="Travel Assistant RAG", layout="centered")
 
@@ -17,15 +21,15 @@ if "messages" not in st.session_state:
 
 # AUTHENTICATION INTERFACE (LOGIN / REGISTER)
 if not st.session_state.user:
-    # Title and action selector
+    # Title and action selector (sign in/sign up)
     st.title("Log in to the Travel Assistant system")
     auth_mode = st.radio("Select action:", ["Sign in", "Sign up"])
 
-    # Input
+    # Create typing box for user's email and password
     email = st.text_input("Email",type='email')
     password = st.text_input("Password", type="password")
 
-    # Handle submit
+    # Handle submit button
     if st.button("Submit"):
         if auth_mode == "Sign in":
             res = sign_in(email, password)
@@ -44,6 +48,7 @@ if not st.session_state.user:
 
 # RAG CHAT INTERFACE (AFTER LOGGING IN)
 else:
+    # Display title
     st.sidebar.title(f"Hello {st.session_state.user}")
 
     # Handle log out button

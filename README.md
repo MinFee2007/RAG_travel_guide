@@ -7,7 +7,7 @@
 - **Student Name:** `Trần Minh Phi`
 - **Student ID:** `25127116`
 - **Chosen City:** **Ho Chi Minh City, Vietnam** (12 curated entries in `application/knowledge_base.json`)
-- **Demonstration Video:** `[Insert accessible YouTube or Google Drive link here]`
+- **Demonstration Video:** [Youtube](https://www.youtube.com/watch?v=tFSNeuF2vZc "Computational Thinking Assignment 03 Demo: Authentic RAG Chat")
 
 ---
 
